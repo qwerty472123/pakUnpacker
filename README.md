@@ -10,7 +10,7 @@ Chrome pak([Chromium](https://chromium.googlesource.com/) [Grit](https://chromiu
 - `py pakLangPack.py <files...>` 将 json 文件重新打包回 pak 文件。
 - `py pakResLink.py [-f] [-a] [-h] <dirs...>` 将由`pakDataUnpack.py`解压得到的文件夹中的部分内容软链接(`os.symlink`)到名称为`{name}-{encoding}-link`的文件夹，该文件夹中的内容回尝试通过`pakResIds.json`中的`md5 => filename`信息恢复正确命名，找不到的文件不会被链接。
     
-    您也可以用`-h`指令来使用硬链接，使用`-f`来链接未知文件到`{name}-{encoding}-link\unknown`文件夹，使用`-a`来链接标识出的文件(已经是__软__链接)和未标识出`filename`信息相同的文件到`{name}-{encoding}-link\alias`和`{name}-{encoding}-link\preAlias`文件夹。这些未知的文件会被尝试识别出扩展名。
+    您也可以用`-h`指令来使用硬链接，使用`-f`来链接未知文件到`{name}-{encoding}-link\unknown`文件夹，使用`-a`来链接标识出的文件(已经是**软**链接)和未标识出`filename`信息相同的文件到`{name}-{encoding}-link\alias`和`{name}-{encoding}-link\preAlias`文件夹。这些未知的文件会被尝试识别出扩展名。
 - `py pakResAddByDir.py <files...>` 从文件夹中除 unknown/preAlias/alias 三个子文件夹中的文件以外的文件中获取`md5 => filename`并合并入`pakResIds.json`，以新合并入的信息为准。这一文件夹可以是你手工标记过的文件夹，也可以是其他工具生成的文件夹，例如: <https://shuax.com/cpv5> 。
 - `py pakResAddByMerge.py <dirs...>` 将文件中的`md5 => filename`与`pakResIds.json`合并，并以新合并入的信息为准。
 - `py pakTransformPack.py <files...>` 转换 pak 文件格式的版本。对于名称为`{name}.pak`的pak文件，如果它是 v4 版本，会生成名称为`{name}.v5.pak`的 v5 版本 pak 文件;反之，会生成名称为`{name}.v4.pak`的 v4 版本 pak 文件。
