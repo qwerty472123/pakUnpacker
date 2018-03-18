@@ -1,6 +1,6 @@
 # pakUnpacker
 
-Chrome pak([chromium](https://chromium.googlesource.com/) [grit](https://chromium.googlesource.com/chromium/src/tools/grit/) 生成文件)解包打包工具，用以修改 Chromium 发行版翻译及资源内容。
+Chrome pak([Chromium](https://chromium.googlesource.com/) [Grit](https://chromium.googlesource.com/chromium/src/tools/grit/) 生成文件)解包打包工具，用以修改 Chromium 发行版翻译及资源内容。
 
 ## 功能信息如下
 
