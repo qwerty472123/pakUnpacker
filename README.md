@@ -21,5 +21,7 @@ Chrome pak([chromium](https://chromium.googlesource.com/) [grit](https://chromiu
 ## 其他内容
 
 v4 文件夹下是一套简陋的 v4 版本的解包打包工具。
+
 pakLang 文件夹下是一个支持对 v4 版本语言 pak 文件进行进一步翻译的 GUI 工具。
+
 getResourceByShuaX 文件夹下是复制自 <https://github.com/shuax/ChromePAK/tree/master/resource_id> 的`md5 => filename`的信息抓取工具，你可以将得到的`resource_ids.json`文件用`pakResAddByMerge.py`合并入`pakResIds.json`。
